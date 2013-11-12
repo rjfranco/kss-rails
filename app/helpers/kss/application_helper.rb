@@ -1,4 +1,5 @@
 require 'ostruct'
+require 'github/markup'
 
 module Kss
   module ApplicationHelper
@@ -22,6 +23,16 @@ module Kss
       @section = styleguide.section(section)
       @section = OpenStruct.new({section: section}) unless @section.raw
       render 'kss/shared/styleguide_entry', :section => @section
+    end
+
+    def markdown(section)
+      md.render section.description
+    end
+
+    private
+
+    def md
+      @@md ||= Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :no_intra_emphasis => true)
     end
   end
 end
