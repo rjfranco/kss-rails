@@ -26,7 +26,7 @@ module Kss
     end
 
     def markdown(section)
-      md.render section.description
+      md.render section
     end
 
     private

@@ -2,7 +2,7 @@
   <% if section.raw %>
     <h3><%= section.section %> <em><%= section.filename %></em></h3>
     <div class="styleguide-description">
-      <%= markdown h(section.description) %>
+      <%= raw markdown section.description %>
     </div>
   <% else %>
     <h3><%= section.section %></h3>
