@@ -1,4 +1,5 @@
 require 'ostruct'
+require 'redcarpet'
 
 module Kss
   module ApplicationHelper
