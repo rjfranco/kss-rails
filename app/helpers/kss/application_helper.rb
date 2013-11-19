@@ -1,5 +1,4 @@
 require 'ostruct'
-require 'github/markup'
 
 module Kss
   module ApplicationHelper
